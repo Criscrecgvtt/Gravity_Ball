@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Compilar SFML 3.0.0",
+      "command": "g++",
+      "args": [
+        "-IC:/SFML/SFML-3.0.0/include",
+        "-DSFML_STATIC",
+        "-LC:/SFML/SFML-3.0.0/lib",
+        "${file}",
+        "-lsfml-graphics-s",
+        "-lsfml-window-s",
+        "-lsfml-system-s",
+        "-lopengl32",
+        "-lfreetype",
+        "-lwinmm",
+        "-lgdi32",
+        "-mconsole",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compila tu archivo usando SFML 3.0.0 desde C:/SFML"
+    }
+  ]
+}
